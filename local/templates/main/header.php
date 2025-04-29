@@ -44,7 +44,7 @@ $bHomePage = CSite::InDir('/index.php');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/plugins.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/main.js');
 
-        Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet>')
+        Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">')
         ?>
 
         <?php $APPLICATION->ShowHead(); ?>

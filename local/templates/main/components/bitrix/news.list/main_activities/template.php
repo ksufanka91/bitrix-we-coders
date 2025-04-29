@@ -26,8 +26,8 @@ if (empty($arResult['ITEMS'])) return;
         <div class="row">
             <?php foreach ($arResult['ITEMS'] as $arItem): ?>
                 <?php
-                $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_EDTI'));
-                $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_DELETE'), array('CONFIRM' => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+                $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_EDIT'));
+                $this->AddEditAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_DELETE'), ['CONFIRM' => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')]);
                 ?>
                 <div id="<?= $this->GetEditAreaId($arItem['ID']); ?>" class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-service brand-hover radius-4 mb-30 text-center">
