@@ -2,12 +2,6 @@
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle("Портфолио");
 $APPLICATION->SetPageProperty('title', 'Порфолио');
-
-// /portfolio/abc/foo -> /portfolio/index.php
-// /portfolio/test/123 -> /portfolio/index.php
-
-// /portfolio/ -> news.php
-// /portfolio/section1/element1 -> detail.php
 ?>
 
 
@@ -88,7 +82,7 @@ $APPLICATION->SetPageProperty('title', 'Порфолио');
         "SET_LAST_MODIFIED" => "N",    // Устанавливать в заголовках ответа время модификации страницы
         "SET_STATUS_404" => "Y",    // Устанавливать статус 404
         "SET_TITLE" => "Y",    // Устанавливать заголовок страницы
-        "SHOW_404" => "N",    // Показ специальной страницы
+        "SHOW_404" => "Y",    // Показ специальной страницы
         "SORT_BY1" => "SORT",    // Поле для первой сортировки новостей
         "SORT_BY2" => "ACTIVE_FROM",    // Поле для второй сортировки новостей
         "SORT_ORDER1" => "ASC",    // Направление для первой сортировки новостей
