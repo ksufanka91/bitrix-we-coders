@@ -2,6 +2,7 @@
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle("Контакты");
 $APPLICATION->SetPageProperty('title', 'Контакты');
+$APPLICATION->AddChainItem($APPLICATION->GetTitle(), $APPLICATION->GetCurDir());
 ?>
     <div class="contact-form pt-90 pb-30">
         <div class="container">

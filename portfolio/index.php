@@ -2,6 +2,7 @@
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle("Портфолио");
 $APPLICATION->SetPageProperty('title', 'Порфолио');
+$APPLICATION->AddChainItem($APPLICATION->GetTitle(), $APPLICATION->GetCurDir());
 ?>
 
 
