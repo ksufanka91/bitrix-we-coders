@@ -19,7 +19,7 @@ if (empty($arResult)) return;
                 <?php foreach ($arResult as $item): ?>
                     <li class="test">
                         <?php if ($item['SELECTED']): ?>
-                            <a href="<?= $item['LINK'] ?>" style="color: blue"><?= $item['TEXT'] ?></a>
+                            <a href="<?= $item['LINK'] ?>" style="color: #81ddff;"><?= $item['TEXT'] ?></a>
                         <?php else: ?>
                             <a href="<?= $item['LINK'] ?>"><?= $item['TEXT'] ?></a>
                         <?php endif; ?>
