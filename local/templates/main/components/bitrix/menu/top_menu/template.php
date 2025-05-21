@@ -17,27 +17,24 @@ if (empty($arResult)) return;
         <ul class="main-menu text-right">
             <?php foreach ($arResult as $item): ?>
                 <li>
-                    <?php if ($item['SELECTED']): ?>
-                        <a href="<?= $item['LINK'] ?>" style="color: #03A9F4"><?= $item['TEXT'] ?></a>
-                    <?php else: ?>
-                        <a href="<?= $item['LINK'] ?>"><?= $item['TEXT'] ?></a>
+                    <a href="<?= $item['LINK']; ?>" <?= $item['SELECTED'] ? 'style="color: #009cbb"' : ''; ?>>
+                        <?= $item['TEXT']; ?>
+                        <?php if (!empty($item['SUBITEMS'])): ?>
+                            <span class="indicator"><i class="fa fa-angle-down"></i></span>
+                        <?php endif; ?>
+                    </a>
+
+                    <?php if (!empty($item['SUBITEMS'])): ?>
+                        <ul class="dropdown">
+                            <?php foreach ($item['SUBITEMS'] as $subitem): ?>
+                                <li>
+                                    <a href="<?= $subitem['LINK']; ?>"><?= $subitem['TEXT']; ?></a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
                     <?php endif; ?>
                 </li>
             <?php endforeach; ?>
         </ul>
     </nav>
 </div>
-
-<?php
-/*<li>
-    <a href="services.html"> Услуги
-        <span class="indicator"><i class="fa fa-angle-down"></i></span></a>
-    <ul class="dropdown">
-        <li>
-            <a href="services_landing.html">Лендинг</a>
-        </li>
-        <li>
-            <a href="services_online_shop.html">Интернет-магазин</a>
-        </li>
-    </ul>
-</li>*/

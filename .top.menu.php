@@ -1,46 +1,45 @@
-<?
-$aMenuLinks = Array(
-	Array(
-		"Главная", 
-		"/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"О нас", 
-		"/about/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Услуги", 
-		"/services/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Портфолио", 
-		"/portfolio/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Блог", 
-		"/blog/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Контакты", 
-		"/contacts/", 
-		Array(), 
-		Array(), 
-		"" 
-	)
-);
-?>
+<?php
+$aMenuLinks = [
+    [
+        "Главная",
+        "/",
+        [],
+        [],
+        "",
+    ],
+    [
+        "О нас",
+        "/about/",
+        [],
+        [],
+        "",
+    ],
+    [
+        "Услуги",
+        "/services/",
+        [],
+        [],
+        "",
+    ],
+    [
+        "Портфолио",
+        "/portfolio/",
+        [],
+        [],
+        "",
+    ],
+    [
+        "Блог",
+        "/blog/",
+        [],
+        [],
+        "",
+    ],
+    [
+        "Контакты",
+        "/contacts/",
+        [],
+        [],
+        "",
+    ],
+];
