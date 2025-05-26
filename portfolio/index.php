@@ -76,8 +76,8 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle(), $APPLICATION->GetCurDir());
         "SEF_FOLDER" => "/portfolio/",    // Каталог ЧПУ (относительно корня сайта)
         "SEF_MODE" => "Y",    // Включить поддержку ЧПУ
         "SEF_URL_TEMPLATES" => [
-            "detail" => "#SECTION_CODE#/#ELEMENT_CODE#/",
-            "news" => "",
+            "detail" => "#SECTION_CODE#/#ELEMENT_CODE#/", // /portfolio/sec/el/
+            "news" => "", // /portfolio/
 //            "section" => "",
         ],
         "SET_LAST_MODIFIED" => "N",    // Устанавливать в заголовках ответа время модификации страницы
