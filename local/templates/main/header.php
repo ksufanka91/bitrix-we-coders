@@ -203,7 +203,7 @@ $bHomePage = CSite::InDir('/index.php');
                 </div>
                 <?php $APPLICATION->IncludeComponent(
                     "bitrix:breadcrumb",
-                    "TopNavigate",
+                    "top_navigate",
                     [
                         "PATH" => "",    // Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
                         "SITE_ID" => "s1",    // Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)

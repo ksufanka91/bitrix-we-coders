@@ -29,7 +29,8 @@ $this->setFrameMode(true);
                             [
                                 "AREA_FILE_SHOW" => "page",
                                 "AREA_FILE_SUFFIX" => "services_title",
-                            ]
+                            ],
+                            $component
                         ); ?>
                     </h2>
                     <?php $APPLICATION->IncludeComponent(
@@ -38,7 +39,8 @@ $this->setFrameMode(true);
                         [
                             "AREA_FILE_SHOW" => "page",
                             "AREA_FILE_SUFFIX" => "services_text",
-                        ]
+                        ],
+                        $component
                     ); ?>
                 </div>
             </div>
@@ -100,7 +102,8 @@ $this->setFrameMode(true);
                         "SORT_ORDER1" => "ASC",
                         "SORT_ORDER2" => "ASC",
                         "STRICT_SECTION_CHECK" => "N",
-                    ]
+                    ],
+                    $component
                 ); ?>
             </div>
         </div>
@@ -159,7 +162,8 @@ $this->setFrameMode(true);
                 "SORT_ORDER1" => "ASC",
                 "SORT_ORDER2" => "ASC",
                 "STRICT_SECTION_CHECK" => "N",
-            ]
+            ],
+            $component
         ); ?>
 
         <?php $APPLICATION->IncludeComponent(

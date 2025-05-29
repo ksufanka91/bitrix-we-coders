@@ -2,7 +2,6 @@
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle("О нас");
 $APPLICATION->SetPageProperty('TITLE', 'О нас | We coders');
-$APPLICATION->AddChainItem($APPLICATION->GetTitle(), $APPLICATION->GetCurDir());
 ?>
 
 <section class="who-area-are pad-90" id="about_us">

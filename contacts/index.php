@@ -2,7 +2,6 @@
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle("Контакты");
 $APPLICATION->SetPageProperty('title', 'Контакты');
-$APPLICATION->AddChainItem($APPLICATION->GetTitle(), $APPLICATION->GetCurDir());
 ?>
     <div class="contact-form pt-90 pb-30">
         <div class="container">
@@ -46,7 +45,7 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle(), $APPLICATION->GetCurDir());
                 </div>
                 <?php $APPLICATION->IncludeComponent(
                     "azovceva:main.feedback",
-                    "ContactsPageForm",
+                    "contacts",
                     [
                         "EMAIL_TO" => "admin@admin.ru",
                         "EVENT_MESSAGE_ID" => ["7"],
@@ -73,4 +72,3 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle(), $APPLICATION->GetCurDir());
 
 <?php
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php');
-?>

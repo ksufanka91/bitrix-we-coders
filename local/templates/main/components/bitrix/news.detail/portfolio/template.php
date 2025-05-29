@@ -22,7 +22,7 @@ $this->setFrameMode(true);
                         <?= $arResult['PROPERTIES']['title_detail']['VALUE'] ?? ''; ?>
                     </h3>
                     <?php if (!empty($arResult['PROPERTIES']['description']['VALUE'])): ?>
-                        <?php foreach ($arResult['PROPERTIES']['description']['VALUE'] as $keyValue => $propValue): ?>
+                        <?php foreach ($arResult['PROPERTIES']['description']['~VALUE'] as $keyValue => $propValue): ?>
                             <?php if (!empty($arResult['PROPERTIES']['description']['DESCRIPTION'][$keyValue])): ?>
                                 <span class="text-colort-blue">
                                         <?= $arResult['PROPERTIES']['description']['DESCRIPTION'][$keyValue]; ?>
@@ -30,7 +30,11 @@ $this->setFrameMode(true);
                             <?php endif; ?>
 
                             <?php if (!empty($propValue)): ?>
-                                <p><?= $propValue['TEXT']; ?></p>
+                                <?php if ($propValue['TYPE'] == 'TEXT'): ?>
+                                    <p><?= $propValue['TEXT']; ?></p>
+                                <?php else: ?>
+                                    <?= $propValue['TEXT']; ?>
+                                <?php endif; ?>
                             <?php endif; ?>
                         <?php endforeach; ?>
                     <?php endif; ?>

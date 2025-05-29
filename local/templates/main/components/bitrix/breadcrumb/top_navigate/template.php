@@ -19,11 +19,9 @@ $res = '<div class="col-md-5 col-sm-6">
 $elCount = count($arResult);
 
 foreach ($arResult as $index => $item) {
-    $link = (!empty($item['LINK']) && $index < ($elCount - 1)) ? $item['LINK'] : '#';
+    $link = $item['LINK'] ?: '#';
     $title = $item['TITLE'] ?? '';
-    $res .= '<li>
-                <a href = "' . $link . '">' . $title . '</a >
-               </li>';
+    $res .= '<li><a href = "' . $link . '">' . $title . '</a></li>';
 }
 
 $res .= '</ol>

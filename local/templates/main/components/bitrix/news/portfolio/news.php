@@ -15,7 +15,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) exit;
 $this->setFrameMode(true);
 ?>
 
-
 <section class="work-area pad-90">
     <div class="container">
         <div class="row">
@@ -25,39 +24,43 @@ $this->setFrameMode(true);
             </div>
         </div>
         <div class="row">
-            <? $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "PortfolioSectionsList", [
-                "ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",    // Дополнительный фильтр для подсчета количества элементов в разделе
-                "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
-                "CACHE_FILTER" => "N",    // Кешировать при установленном фильтре
-                "CACHE_GROUPS" => "N",    // Учитывать права доступа
-                "CACHE_TIME" => "36000000",    // Время кеширования (сек.)
-                "CACHE_TYPE" => "A",    // Тип кеширования
-                "COUNT_ELEMENTS" => "N",    // Показывать количество элементов в разделе
-                "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",    // Показывать количество
-                "FILTER_NAME" => "sectionsFilter",    // Имя массива со значениями фильтра разделов
-                "HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",    // Скрывать разделы с нулевым количеством элементов
-                "IBLOCK_ID" => $arParams["IBLOCK_ID"],    // Инфоблок
-                "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],    // Тип инфоблока
-                "SECTION_CODE" => "",    // Код раздела
-                "SECTION_FIELDS" => [    // Поля разделов
-                    0 => "CODE",
-                    1 => "NAME",
+            <?php
+            $APPLICATION->IncludeComponent(
+                "bitrix:catalog.section.list",
+                "portfolio",
+                [
+                    "ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",    // Дополнительный фильтр для подсчета количества элементов в разделе
+                    "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
+                    "CACHE_FILTER" => "N",    // Кешировать при установленном фильтре
+                    "CACHE_GROUPS" => "N",    // Учитывать права доступа
+                    "CACHE_TIME" => "36000000",    // Время кеширования (сек.)
+                    "CACHE_TYPE" => "A",    // Тип кеширования
+                    "COUNT_ELEMENTS" => "N",    // Показывать количество элементов в разделе
+                    "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",    // Показывать количество
+                    "FILTER_NAME" => "sectionsFilter",    // Имя массива со значениями фильтра разделов
+                    "HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",    // Скрывать разделы с нулевым количеством элементов
+                    "IBLOCK_ID" => $arParams["IBLOCK_ID"],    // Инфоблок
+                    "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],    // Тип инфоблока
+                    "SECTION_CODE" => "",    // Код раздела
+                    "SECTION_FIELDS" => [    // Поля разделов
+                        0 => "CODE",
+                        1 => "NAME",
+                    ],
+                    "SECTION_ID" => "",    // ID раздела
+                    "SECTION_URL" => "",    // URL, ведущий на страницу с содержимым раздела
+                    "SECTION_USER_FIELDS" => [    // Свойства разделов
+                    ],
+                    "SHOW_PARENT_NAME" => "Y",    // Показывать название раздела
+                    "TOP_DEPTH" => "1",    // Максимальная отображаемая глубина разделов
+                    "VIEW_MODE" => "LINE",    // Вид списка подразделов
                 ],
-                "SECTION_ID" => "",    // ID раздела
-                "SECTION_URL" => "",    // URL, ведущий на страницу с содержимым раздела
-                "SECTION_USER_FIELDS" => [    // Свойства разделов
-                ],
-                "SHOW_PARENT_NAME" => "Y",    // Показывать название раздела
-                "TOP_DEPTH" => "1",    // Максимальная отображаемая глубина разделов
-                "VIEW_MODE" => "LINE",    // Вид списка подразделов
-            ],
-                false
+                $component
             ); ?>
 
             <?php
             $APPLICATION->IncludeComponent(
                 "bitrix:news.list",
-                "portfolio_elements_list",
+                "portfolio",
                 [
                     "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
                     "IBLOCK_ID" => $arParams["IBLOCK_ID"],
